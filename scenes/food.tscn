@@ -1,0 +1,119 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://sprites/sushi.png" type="Texture" id=1]
+[ext_resource path="res://scripts/food.gd" type="Script" id=2]
+
+[sub_resource type="CanvasItemMaterial" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 11, 11 )
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 3.8147e-06, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "take"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 3.8147e-06, 3 ), Vector2( 3.8147e-06, -16 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("..")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.5 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "queue_free"
+} ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "up_down"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 3.8147e-06, 3 ), Vector2( 3.8147e-06, 2 ), Vector2( 3.8147e-06, 1 ), Vector2( 3.8147e-06, 3.8147e-06 ), Vector2( 3.8147e-06, -0.999996 ), Vector2( 3.8147e-06, -2 ), Vector2( 3.8147e-06, -0.999996 ), Vector2( 3.8147e-06, 3.8147e-06 ), Vector2( 3.8147e-06, 1 ), Vector2( 3.8147e-06, 2 ), Vector2( 3.8147e-06, 3 ) ]
+}
+
+[node name="food" type="Node2D"]
+position = Vector2( 0, -3 )
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+material = SubResource( 4 )
+position = Vector2( 3.8147e-06, 1 )
+scale = Vector2( 0.194215, 0.157143 )
+texture = ExtResource( 1 )
+region_rect = Rect2( 66, 101, 0, 0 )
+
+[node name="area" type="Area2D" parent="Sprite"]
+position = Vector2( -1.96416e-05, -2.42753e-05 )
+scale = Vector2( 5.14894, 6.36364 )
+
+[node name="sushi" type="CollisionShape2D" parent="Sprite/area"]
+shape = SubResource( 1 )
+
+[node name="anim" type="AnimationPlayer" parent="Sprite"]
+anims/RESET = SubResource( 2 )
+anims/take = SubResource( 5 )
+anims/up_down = SubResource( 3 )
+
+[connection signal="body_entered" from="Sprite/area" to="." method="_on_area_body_entered"]
