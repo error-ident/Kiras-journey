@@ -1,12 +1,9 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://sprites/sushi.png" type="Texture" id=1]
+[ext_resource path="res://sprites/food/sushi.png" type="Texture" id=1]
 [ext_resource path="res://scripts/food.gd" type="Script" id=2]
 
 [sub_resource type="CanvasItemMaterial" id=4]
-
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 11, 11 )
 
 [sub_resource type="Animation" id=2]
 length = 0.001
@@ -93,6 +90,9 @@ tracks/0/keys = {
 "values": [ Vector2( 3.8147e-06, 3 ), Vector2( 3.8147e-06, 2 ), Vector2( 3.8147e-06, 1 ), Vector2( 3.8147e-06, 3.8147e-06 ), Vector2( 3.8147e-06, -0.999996 ), Vector2( 3.8147e-06, -2 ), Vector2( 3.8147e-06, -0.999996 ), Vector2( 3.8147e-06, 3.8147e-06 ), Vector2( 3.8147e-06, 1 ), Vector2( 3.8147e-06, 2 ), Vector2( 3.8147e-06, 3 ) ]
 }
 
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 11, 11 )
+
 [node name="food" type="Node2D"]
 position = Vector2( 0, -3 )
 script = ExtResource( 2 )
@@ -104,16 +104,17 @@ scale = Vector2( 0.194215, 0.157143 )
 texture = ExtResource( 1 )
 region_rect = Rect2( 66, 101, 0, 0 )
 
-[node name="area" type="Area2D" parent="Sprite"]
-position = Vector2( -1.96416e-05, -2.42753e-05 )
-scale = Vector2( 5.14894, 6.36364 )
-
-[node name="sushi" type="CollisionShape2D" parent="Sprite/area"]
-shape = SubResource( 1 )
-
-[node name="anim" type="AnimationPlayer" parent="Sprite"]
+[node name="anim" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Sprite")
 anims/RESET = SubResource( 2 )
 anims/take = SubResource( 5 )
 anims/up_down = SubResource( 3 )
 
-[connection signal="body_entered" from="Sprite/area" to="." method="_on_area_body_entered"]
+[node name="area" type="Area2D" parent="."]
+position = Vector2( 6.59384e-12, 0.999996 )
+scale = Vector2( 1, 1 )
+
+[node name="sushi" type="CollisionShape2D" parent="area"]
+shape = SubResource( 1 )
+
+[connection signal="body_entered" from="area" to="." method="_on_area_body_entered"]
