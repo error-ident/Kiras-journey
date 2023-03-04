@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Where Is My Mind_ [8 Bit Tribute to Pixies (and Fight Club!)] - 8 Bit Universe.mp3-7afe76729d0dcb72ec06ba4858b7ce92.mp3str"
+
+[deps]
+
+source_file="res://Menu/Where Is My Mind_ [8 Bit Tribute to Pixies (and Fight Club!)] - 8 Bit Universe.mp3"
+dest_files=[ "res://.import/Where Is My Mind_ [8 Bit Tribute to Pixies (and Fight Club!)] - 8 Bit Universe.mp3-7afe76729d0dcb72ec06ba4858b7ce92.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

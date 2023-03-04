@@ -6,6 +6,7 @@ extends Node2D
 # var b = "text"
 onready var sprite = $Sprite
 var tex_array = [preload("res://sprites/food/sushi.png"), preload("res://sprites/food/pizza.png"), preload("res://sprites/food/hamburger.png")]
+onready var player = $"../../Player"
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	randomize()
@@ -19,6 +20,7 @@ func _ready():
 
 func _on_area_body_entered(body):
 	if body.name == "Player":
+		player.hp += 10
 		$anim.play("take")
 		
 

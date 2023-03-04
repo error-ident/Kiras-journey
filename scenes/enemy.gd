@@ -10,6 +10,7 @@ onready var hp_label = $hp
 onready var attack_timer = $attack_timer
 onready var attack = $attack_zone
 onready var anima = $anima
+
 var hp = 5
 var move_direction = 0
 var directory = "left"
@@ -18,12 +19,13 @@ enum {
 	IDLE,
 	RUN,
 	ATTACK,
+	DIE,
 }
 var state = IDLE
 onready var player = $"../../Player"
 
 func _physics_process(delta):
-	#print(state)
+	print(state)
 	match state:
 		IDLE:
 			$idle.visible = true
@@ -31,25 +33,27 @@ func _physics_process(delta):
 			$attack.visible = false
 			$anima.play("idle")
 		RUN:
-			if !$anima.is_playing():
+			#print($anima.current_animation)
+			if !$anima.current_animation == "attack":
 				$anima.play("run")
 				$idle.visible = false
 				$run.visible = true
 				$attack.visible = false
-			move_state(delta, player)
+				move_state(delta, player)
 		ATTACK:
 			$idle.visible = false
 			$run.visible = false
 			$attack.visible = true
-			#$attack_zone.
 			$anima.play("attack")
 			attack_timer.start()
 			$attack_zone/Collision.disabled = true
-		
+		DIE:
+			$idle.visible = true
+			$run.visible = false
+			$attack.visible = false
+			die()
 
 func move_state(delta, player):
-	#print(player.position.x)
-	#print(position.direction_to(player.position).x)
 	# повернут направо
 	if position.direction_to(player.position).x > 0:
 		if directory == "left":
@@ -68,28 +72,30 @@ func move_state(delta, player):
 	velocity = move_and_slide(velocity, Vector2.UP)
 	
 func die():
-	queue_free()
-
+	remove_child($attack_timer)
+	remove_child($area_angry)
+	remove_child($dmg_zone)
+	remove_child($attack_zone)
+	remove_child($col)
+	$anima.play("die")
 func get_damage():
 		hp -= 1
 		hp_label.text = str(hp)
 		if hp <= 0:
-			die()
+			state = DIE
 
 func _on_area_angry_body_entered(body):
 	if body.name == "Player":
-		print("Player!")
 		state = RUN
 
 # зона удара игрока по мобу
 func _on_dmg_zone_area_entered(area):
 	if area.is_in_group("weapon"):
 		get_damage()
-		print("получен урон (моб): {}")
+		print("получен урон (моб крыса): {}")
 
 # игрок в зоне поражения
 func _on_attack_zone_body_entered(body):
-	print(body.name)
 	if body.is_in_group("player"):
 		state = ATTACK
 		#body.
@@ -99,5 +105,6 @@ func _on_attack_zone_body_exited(body):
 	state = RUN
 
 func _on_attack_timer_timeout():
-	$attack_zone/Collision.disabled = false
+	if $attack_zone/Collision:
+		$attack_zone/Collision.disabled = false
 	state = RUN

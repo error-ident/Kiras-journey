@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Menu/Buttons/StartButton.gd" type="Script" id=2]
+
+[node name="Start Game" type="Button"]
+anchor_left = -0.009
+anchor_right = -0.009
+margin_left = 17.28
+margin_top = -3.0
+margin_right = 1925.28
+margin_bottom = 603.0
+rect_min_size = Vector2( 360, 60 )
+rect_scale = Vector2( 1.00351, 1.77933 )
+script = ExtResource( 2 )
+scene_to_load = "res://Scenes/LevelOne.tscn"

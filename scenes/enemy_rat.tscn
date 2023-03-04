@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://sprites/enemy/rat-idle.png" type="Texture" id=1]
 [ext_resource path="res://scenes/enemy.gd" type="Script" id=2]
@@ -70,6 +70,47 @@ tracks/0/keys = {
 "values": [ 1, 2, 3, 4, 5 ]
 }
 
+[sub_resource type="Animation" id=9]
+resource_name = "die"
+tracks/0/type = "value"
+tracks/0/path = NodePath("idle:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -1, 1 ), Vector2( -1.091, 1 ), Vector2( -1.374, 1 ), Vector2( -1.374, 1.201 ), Vector2( -1.296, 1.302 ), Vector2( -1.164, 1.152 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("idle:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.6 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "queue_free"
+} ]
+}
+
 [sub_resource type="Animation" id=4]
 resource_name = "idle"
 loop = true
@@ -101,13 +142,14 @@ tracks/0/keys = {
 "values": [ 0, 2, 3, 4, 1 ]
 }
 
-[node name="enemy" type="KinematicBody2D" groups=["enemy"]]
+[node name="enemy_rat" type="KinematicBody2D" groups=["enemy"]]
 script = ExtResource( 2 )
 
 [node name="idle" type="Sprite" parent="."]
 visible = false
+modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 0, 13 )
-scale = Vector2( -1, 1 )
+scale = Vector2( -1.164, 1.152 )
 texture = ExtResource( 1 )
 hframes = 6
 
@@ -153,6 +195,7 @@ shape = SubResource( 3 )
 [node name="anima" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 5 )
 anims/attack = SubResource( 6 )
+anims/die = SubResource( 9 )
 anims/idle = SubResource( 4 )
 anims/run = SubResource( 7 )
 

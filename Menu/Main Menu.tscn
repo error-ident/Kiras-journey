@@ -1,0 +1,80 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Menu/Buttons/StartButton.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Menu/fonts/tupo-vyaz_bold.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Menu/video.webm" type="VideoStream" id=3]
+[ext_resource path="res://Menu/Yasuha - Flyday Chinatown [ 8bits Version ].mp3" type="AudioStream" id=4]
+[ext_resource path="res://fade_in/FadeIn.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Menu/title_screen.gd" type="Script" id=8]
+[ext_resource path="res://Menu/UISound.tscn" type="PackedScene" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+size = 300
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 300
+font_data = ExtResource( 2 )
+
+[node name="mainmenu" type="Control"]
+script = ExtResource( 8 )
+
+[node name="VideoPlayer" type="VideoPlayer" parent="."]
+margin_right = 1283.0
+margin_bottom = 718.0
+stream = ExtResource( 3 )
+autoplay = true
+buffering_msec = 10
+
+[node name="Label" type="Label" parent="."]
+margin_left = -323.0
+margin_top = -31.0
+margin_right = 1596.0
+margin_bottom = 640.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "путешествие
+Киры"
+align = 1
+valign = 1
+
+[node name="FadeIn" parent="." instance=ExtResource( 6 )]
+visible = false
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="UISound" parent="." instance=ExtResource( 9 )]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -18.538
+autoplay = true
+
+[node name="main" type="CenterContainer" parent="."]
+anchor_right = 10.0
+margin_left = 447.0
+margin_top = 583.0
+margin_right = 1217.0
+margin_bottom = 883.0
+rect_min_size = Vector2( 770, 300 )
+rect_scale = Vector2( 0.465011, 0.432015 )
+
+[node name="Start Game" parent="main" instance=ExtResource( 1 )]
+anchor_left = 0.0
+anchor_right = 0.0
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 770.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 770, 300 )
+rect_scale = Vector2( 1, 1 )
+focus_mode = 1
+custom_fonts/font = SubResource( 2 )
+enabled_focus_mode = 1
+text = "НАЧАТЬ"
+flat = true
+
+[connection signal="finished" from="VideoPlayer" to="." method="_on_VideoPlayer_finished"]
+[connection signal="ready" from="VideoPlayer" to="FadeIn" method="_on_VideoPlayer_ready"]
+[connection signal="fade_finished" from="FadeIn" to="." method="_on_FadeIn_fade_finished"]
+[connection signal="tree_entered" from="FadeIn" to="FadeIn" method="_on_FadeIn_tree_entered"]

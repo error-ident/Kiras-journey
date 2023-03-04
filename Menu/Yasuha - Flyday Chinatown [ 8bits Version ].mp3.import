@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Yasuha - Flyday Chinatown [ 8bits Version ].mp3-2e1c2ad3e42dd6958cdf49dbd290f4ca.mp3str"
+
+[deps]
+
+source_file="res://Menu/Yasuha - Flyday Chinatown [ 8bits Version ].mp3"
+dest_files=[ "res://.import/Yasuha - Flyday Chinatown [ 8bits Version ].mp3-2e1c2ad3e42dd6958cdf49dbd290f4ca.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

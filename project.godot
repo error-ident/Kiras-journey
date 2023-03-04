@@ -84,6 +84,12 @@ config/name="basic_platformer"
 run/main_scene="res://scenes/level_1.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/width=1280
+window/size/height=720
+window/stretch/mode="2d"
+
 [editor_plugins]
 
 enabled=PoolStringArray( "res://addons/VirtualJoystick/plugin.cfg", "res://addons/dialogic/plugin.cfg" )

@@ -33,6 +33,7 @@ func die(reason):
 	get_tree().reload_current_scene()
 
 func _physics_process(delta):
+	hp_bar.text = "satiety: " + str(hp)
 	var move_direction = 0
 	#print($VirtualJoystick.angle)
 	# атака
@@ -53,7 +54,7 @@ func _physics_process(delta):
 	velocity.x = move_direction * MOVE_SPEED
 	# проверяет что Player находится на полу
 	if is_on_floor():
-		if Input.is_action_just_pressed("jump"):
+		if Input.is_action_pressed("jump"):
 			velocity.y = JUMP_SPEED
 		else:
 			velocity.y = 0
@@ -81,3 +82,6 @@ func _on_Hitbox_area_entered(area):
 	if area.is_in_group("enemy_weapon"):
 		print("получен урон!")
 		get_damage(10)
+
+func get_food():
+	pass
