@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Stay With Me - Miki Matsubara but 8bit.mp3-a6dd9b75f08972523d765d341a177a63.mp3str"
+
+[deps]
+
+source_file="res://welcome/Stay With Me - Miki Matsubara but 8bit.mp3"
+dest_files=[ "res://.import/Stay With Me - Miki Matsubara but 8bit.mp3-a6dd9b75f08972523d765d341a177a63.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

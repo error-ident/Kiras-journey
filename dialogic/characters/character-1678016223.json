@@ -1,0 +1,21 @@
+{
+	"color": "#ff500404",
+	"description": "",
+	"display_name": "kek",
+	"display_name_bool": true,
+	"id": "character-1678016223.json",
+	"mirror_portraits": false,
+	"name": "mr kek",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://icon.png"
+		}
+	],
+	"scale": 500,
+	"theme": ""
+}

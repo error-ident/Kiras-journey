@@ -81,7 +81,7 @@ _global_script_class_icons={
 [application]
 
 config/name="basic_platformer"
-run/main_scene="res://scenes/level_1.tscn"
+run/main_scene="res://Menu/Main Menu.tscn"
 config/icon="res://icon.png"
 
 [display]
@@ -93,6 +93,10 @@ window/stretch/mode="2d"
 [editor_plugins]
 
 enabled=PoolStringArray( "res://addons/VirtualJoystick/plugin.cfg", "res://addons/dialogic/plugin.cfg" )
+
+[global]
+
+"нача"=false
 
 [gui]
 
