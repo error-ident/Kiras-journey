@@ -25,7 +25,6 @@ var state = IDLE
 onready var player = $"../../Player"
 
 func _physics_process(delta):
-	print(state)
 	match state:
 		IDLE:
 			$idle.visible = true
@@ -33,7 +32,6 @@ func _physics_process(delta):
 			$attack.visible = false
 			$anima.play("idle")
 		RUN:
-			#print($anima.current_animation)
 			if !$anima.current_animation == "attack":
 				$anima.play("run")
 				$idle.visible = false
@@ -102,7 +100,6 @@ func _on_attack_zone_body_entered(body):
 		#body.
 		
 func _on_attack_zone_body_exited(body):
-	print("мачи")
 	state = RUN
 
 func _on_attack_timer_timeout():
