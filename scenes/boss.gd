@@ -11,7 +11,7 @@ onready var attack_timer = $attack_timer
 onready var attack = $attack_zone
 onready var anima = $anima
 
-var hp = 5
+var hp = 11
 var move_direction = 0
 var directory = "left"
 
@@ -22,7 +22,7 @@ enum {
 	DIE,
 }
 var state = IDLE
-onready var player = $"../../Player"
+onready var player = $"../Player"
 
 func _physics_process(delta):
 	print(state)

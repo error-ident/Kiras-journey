@@ -33,7 +33,8 @@ func die(reason):
 	get_tree().reload_current_scene()
 
 func _physics_process(delta):
-	hp_bar.text = "satiety: " + str(hp)
+	#hp_bar.text = "satiety: " + str(hp)
+	$hp_bar2.value = hp
 	var move_direction = 0
 	#print($VirtualJoystick.angle)
 	# атака

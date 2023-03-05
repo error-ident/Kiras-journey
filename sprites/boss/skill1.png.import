@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ded.png-2260160e061f308ebd7fd03cabb646a3.stex"
+path="res://.import/skill1.png-16dc3e5da720c820f77857434e8cab71.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://welcome/ded.png"
-dest_files=[ "res://.import/ded.png-2260160e061f308ebd7fd03cabb646a3.stex" ]
+source_file="res://sprites/boss/skill1.png"
+dest_files=[ "res://.import/skill1.png-16dc3e5da720c820f77857434e8cab71.stex" ]
 
 [params]
 

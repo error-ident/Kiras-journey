@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ded.png-2260160e061f308ebd7fd03cabb646a3.stex"
+path="res://.import/greenbar (1).png-4427428e7e2cb45b724c770398b8bb76.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://welcome/ded.png"
-dest_files=[ "res://.import/ded.png-2260160e061f308ebd7fd03cabb646a3.stex" ]
+source_file="res://sprites/icons/greenbar (1).png"
+dest_files=[ "res://.import/greenbar (1).png-4427428e7e2cb45b724c770398b8bb76.stex" ]
 
 [params]
 

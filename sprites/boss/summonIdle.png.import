@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ded.png-2260160e061f308ebd7fd03cabb646a3.stex"
+path="res://.import/summonIdle.png-528e7258acb3fb81c08edb45e6da7ce3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://welcome/ded.png"
-dest_files=[ "res://.import/ded.png-2260160e061f308ebd7fd03cabb646a3.stex" ]
+source_file="res://sprites/boss/summonIdle.png"
+dest_files=[ "res://.import/summonIdle.png-528e7258acb3fb81c08edb45e6da7ce3.stex" ]
 
 [params]
 
