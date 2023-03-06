@@ -1,0 +1,123 @@
+{
+	"events": [
+		{
+			"audio_bus": "Master",
+			"background-music": "play",
+			"event_id": "dialogic_031",
+			"event_name": "BackgroundMusic",
+			"fade_length": 1,
+			"file": "res://Menu/Where Is My Mind_ [8 Bit Tribute to Pixies (and Fight Club!)] - 8 Bit Universe.mp3",
+			"volume": 0
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1678065968.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1678065968.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Здравствуй, милая Кира <3"
+		},
+		{
+			"character": "character-1678065968.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Да, это Толя... Ты наверное спросишь почему я в сундуке? Просто мне не хватило бюджета на еще один рисунок в пиксель арте, но это не особо и важно... Мне тут даже комфортно! Посмотри на этот красивый закат ..."
+		},
+		{
+			"character": "character-1678065968.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "...."
+		},
+		{
+			"character": "character-1678065968.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Сегодня твой празник, очень надеюсь, что этот день прошёл для тебя прекрасно! "
+		},
+		{
+			"character": "character-1678065968.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Я очень дорожу нашим общением и всем тем временем, проведенным с тобой, в жизни или телеграме ..."
+		},
+		{
+			"character": "character-1678065968.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ты одна из самых удивительных людей, которых я встречал в своей жизни. Твоя любовь к еде, это что-то за гранью реального, невозможно быть настолько милой, но у тебя это получается. Каждая эмоция на твоём лице, каждая нотка голоса, каждое сообщение... Всё это заставляет мою душу улыбаться."
+		},
+		{
+			"character": "character-1678065968.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Я долго думал, что можно подарить, и надеюсь, что это маленькое приключение хотя бы тебя развеселило!"
+		},
+		{
+			"character": "character-1678065968.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "От всего средца прошу тебя, всегда оставалась такой, какая ты есть. Такой же милой, умной, интересной и удивительной! Ты силище!"
+		},
+		{
+			"character": "character-1678065968.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "В этом мире не хватит места на всех информационных носителях, чтобы перечислить все комплементы для тебя. "
+		},
+		{
+			"character": "character-1678065968.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Пусть твои душа и сердце пылают, пусть еда будет всегда вкусной, пусть этот мир дарит тебе только положительные эмоции, пусть ты и твои родные будут счастливы и здоровы, а у тебя будет куча денех!!!"
+		},
+		{
+			"character": "character-1678065968.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Спасибо, что ты есть! Ты прелесть <3"
+		},
+		{
+			"character": "character-1678065968.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "А теперь, давай посмотрим на закат и через 10 секунд, тебя выкинет в меню. Это значит, что путешествие подошло к концу) Напиши мне, пожалуйста, как это случится :3"
+		},
+		{
+			"event_id": "dialogic_023",
+			"hide_dialogbox": true,
+			"wait_seconds": 10
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 2
+		},
+		{
+			"change_scene": "res://Menu/Main Menu.tscn",
+			"event_id": "dialogic_041"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1678066088.json",
+		"name": "anatoly"
+	}
+}

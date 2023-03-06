@@ -11,7 +11,7 @@
 			"portrait": "Default",
 			"portrait_definition": "",
 			"position": {
-				"0": true,
+				"0": false,
 				"1": false,
 				"2": false,
 				"3": false,
@@ -24,12 +24,214 @@
 			"character": "character-1678016223.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Хэллоу, я мистер кек"
+			"text": "Привет, [color=#A5EFAC]КИРА[/color]! Я очень рад тебя видеть! Это значит, что пророчество сбывается. Кхм. Моё имя [color=#A5EFAC]Чино.[/color]"
+		},
+		{
+			"character": "character-1678016223.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Понимаю, что у тебя множество вопросов ко мне, но давай по порядку!"
+		},
+		{
+			"character": "character-1678016223.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Но сначала... Ты кушала сегодня?"
+		},
+		{
+			"choice": "Да",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1678016223.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Хм, странно, ты ведь только появилась... Ну да ладно, это всего лишь нюансы и к пророчеству никакого отношения не имеют, я просто пытаюсь разрушить четверную стену...."
+		},
+		{
+			"choice": "нет",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1678016223.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Хм, странно, ты ведь только появилась... Ну да ладно, это всего лишь нюансы и к пророчеству никакого отношения не имеют, я просто пытаюсь разрушить четверную стену...."
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"character": "character-1678016223.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Кстати, я тут анекдот вспомнил:\n\nЗаходят как-то аморал, нигилист, циник и крипто-инвестор в бар. А бармен ему говорит:\n— У нас спиртное только с 18.\n\nАхахахах!"
+		},
+		{
+			"character": "character-1678016223.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Так вот.... Я так долго тебя ждал, но кажись пророчество сбывается....\nКхе-кхе... Я понимаю и представляю сколько у тебя вопросов. Ха-ха. У меня к тебе не меньше!!!! "
+		},
+		{
+			"character": "character-1678016223.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Скажи пожалуйста, ты себя хорошо чувствуешь???"
+		},
+		{
+			"choice": "Да",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1678016223.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Боги не прогодали с выбором!!! Они то уже знают кому доверить свой небесный пир!!! И ты тоже знаешь кому доверять. Так же?"
+		},
+		{
+			"choice": "Да",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1678016223.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Вот-вот. В тебе сомневаться не имеет смысла. Нежели том бездаре, что советовал тебе вложиться в крипту... Он прогодал, в тебе уже есть нужное сокровище."
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"character": "character-1678016223.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Так-с, Нам срочно нужно покушать!!"
+		},
+		{
+			"choice": "Нет",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1678016223.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "- Ха-ха! Раскажи это тому аболтусу, который тебя криптой заманивал и легкими деньгами."
+		},
+		{
+			"character": "character-1678016223.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Пфф... Я ни за что не поверю, что боги могли выбрать тебя случайно. В тебе есть важная вещь. Сокровище!!! "
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"character": "character-1678016223.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Сомнения всегда приследуют нас, даже тогда, когда мы благословены выбором богов. Бывает так, что сомнения становятся ошибкой. "
+		},
+		{
+			"character": "character-1678016223.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Но что я точно знаю, что тот прайдоха, что тебе крипту сувал, вообще не сомневался в своих словах. Этот тот умник.... "
+		},
+		{
+			"character": "character-1678016223.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ой, да к черту его и его эту крипту!!! Боги выбрали тебя, а не его. Откуда я про него знаю?? Какая-то мета-информация в игру попала.... мде... кхе кхе"
+		},
+		{
+			"character": "character-1678016223.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Так, готова ли исполнить древнее, окутанное мрачной тайной и окультными загадками, Обговоренное между богами и демонами пророчество?"
+		},
+		{
+			"choice": "да",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1678016223.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": " Да? Это оказалось проще чем я думал...Я знаю что тебя заинтересует.... Он был прямо в моей сумке... Так, это поваренная книга с миллионом разныз рецептов!"
+		},
+		{
+			"character": "character-1678016223.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": " Это ложка, которая делает еду вкуснее! А это.... А вот же он. Поднос. Держи. Только смотри не обожгись. Ха-ха."
+		},
+		{
+			"character": "character-1678016223.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": " Итак, твоя задача умудриться собрать еду в этот поднос."
+		},
+		{
+			"character": "character-1678016223.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": " Он не простой. Он бездонный! Вот ты кладешь в него еду, и она остается в нем."
+		},
+		{
+			"character": "character-1678016223.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": " Стоит тебе подумать о блюде и сразу же увидешь уже положенное ранее блюдо на этом подносе. Так, боги не умею ждать. Нам надо спешить! Прыгай в портал!!! Быстро!!!"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
 		}
 	],
 	"metadata": {
 		"dialogic-version": "1.4.5",
 		"file": "timeline-1678016468.json",
-		"name": "timeline-1678016468"
+		"name": "hello"
 	}
 }
