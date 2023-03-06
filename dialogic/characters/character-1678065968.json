@@ -1,11 +1,11 @@
 {
-	"color": "#ff045032",
+	"color": "#ff00ff87",
 	"description": "",
-	"display_name": "Chino",
+	"display_name": "Anatoly",
 	"display_name_bool": true,
-	"id": "character-1678016223.json",
+	"id": "character-1678065968.json",
 	"mirror_portraits": false,
-	"name": "ded",
+	"name": "anatoly",
 	"nickname": "",
 	"nickname_bool": false,
 	"offset_x": 0,
@@ -13,9 +13,9 @@
 	"portraits": [
 		{
 			"name": "Default",
-			"path": "res://icon.png"
+			"path": ""
 		}
 	],
-	"scale": 500,
+	"scale": 100,
 	"theme": ""
 }

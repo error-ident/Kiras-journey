@@ -24,6 +24,9 @@ enum {
 var state = IDLE
 onready var player = $"../../Player"
 
+
+
+
 func _physics_process(delta):
 	match state:
 		IDLE:
@@ -68,6 +71,8 @@ func move_state(delta, player):
 	velocity.x = move_direction * MOVE_SPEED
 	velocity.y += gravity * delta
 	velocity = move_and_slide(velocity, Vector2.UP)
+	
+
 	
 func die():
 	remove_child($attack_timer)

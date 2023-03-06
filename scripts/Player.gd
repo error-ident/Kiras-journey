@@ -31,12 +31,17 @@ func die(reason):
 	# думаю будет забавно написать причину "смерти"
 	print(reason)
 	get_tree().reload_current_scene()
+	
+
 
 func _physics_process(delta):
 	#hp_bar.text = "satiety: " + str(hp)
 	$hp_bar2.value = hp
 	var move_direction = 0
 	#print($VirtualJoystick.angle)
+	if Input.is_action_just_pressed("ui_accept"):
+		if get_node_or_null('DialogNode') != null: 
+			pass
 	# атака
 	if Input.is_action_just_pressed("attack"):
 		attack_hand.disabled = false
@@ -86,3 +91,5 @@ func _on_Hitbox_area_entered(area):
 
 func get_food():
 	pass
+	
+	

@@ -1,0 +1,72 @@
+{
+	"events": [
+		{
+			"audio_bus": "Master",
+			"background-music": "play",
+			"event_id": "dialogic_031",
+			"event_name": "BackgroundMusic",
+			"fade_length": 1,
+			"file": "",
+			"volume": 0
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1678065991.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1678065991.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "АХАХХАХАХ! Я ведь знал, что ты придешь! Ты так и не вложилась в крипту, да????"
+		},
+		{
+			"character": "character-1678065991.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ну конечно не вложилась, я не удивлен! Пока я, с моим корешом фармим бабки в Польше....\nБАбки, сука, бабки, бабки бабки бабки бабки бабки бабки....так... чет меня заело..."
+		},
+		{
+			"character": "character-1678065991.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ты не оправдала моих ожиданий и теперь поплатишься за это!"
+		},
+		{
+			"character": "character-1678065991.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Неужели ты думала, что мы никогда не встретимся??? АХАХАХХАХАХАХ"
+		},
+		{
+			"character": "character-1678065991.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "В БОЙ!!!"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1678066082.json",
+		"name": "crypto"
+	}
+}
