@@ -14,10 +14,13 @@ export(int) var hp: int = hp_max
 enum {
 	IDLE,
 	ATTACK,
+	WALK,
+	JUMP,
 }
+var state = IDLE
 # отключить по дефолту
 onready var attack_hand = $attack_range/attack
-onready var attack_timer = $attack
+onready var attack_timer = $attack_timer
 onready var hp_bar = $HP_BAR
 
 var direction = "right"
@@ -33,36 +36,60 @@ func die(reason):
 	get_tree().reload_current_scene()
 
 func _physics_process(delta):
-	#hp_bar.text = "satiety: " + str(hp)
+	# хп
 	$hp_bar2.value = hp
 	var move_direction = 0
-	#print($VirtualJoystick.angle)
-	# атака
-	if Input.is_action_just_pressed("attack"):
-		attack_hand.disabled = false
-		attack_timer.start()
-	# передвижение
-	if Input.is_action_pressed("left"):
-		if direction == "right":
-			direction = "left"
-			get_node(".").scale.x *= -1
-		move_direction -= 1
-	if Input.is_action_pressed("right"):
-		if direction == "left":
-			direction = "right"
-			get_node(".").scale.x *= -1
-		move_direction += 1
-	velocity.x = move_direction * MOVE_SPEED
+	# машина состояний
+	print("player: "+str(state))
 	# проверяет что Player находится на полу
 	if is_on_floor():
+		print("on floor")
+		if $AnimationPlayer.current_animation == "jump":
+			$AnimationPlayer.play("idle")
 		if Input.is_action_pressed("jump"):
 			velocity.y = JUMP_SPEED
+			$AnimationPlayer.play("jump")
 		else:
 			velocity.y = 0
 	else:
 		velocity.y += GRAVITY * delta
-
+	# атака
+	if Input.is_action_just_pressed("attack"):
+		$AnimationPlayer.play("attack")
+		attack_hand.disabled = false
+		attack_timer.start()
+	# передвижение
+	elif Input.is_action_pressed("left"):
+		if direction == "right":
+			direction = "left"
+			#get_node(".").scale.x *= -1
+			$sprite.scale.x *= -1
+			$attack_range.scale.x *= -1
+			$Hitbox.scale.x *= -1
+			$CollisionShape2D.scale.x *= -1
+		move_direction -= 1
+		if !$AnimationPlayer.current_animation == "jump" and !$AnimationPlayer.current_animation == "attack":
+			$AnimationPlayer.play("walk")
+	elif Input.is_action_pressed("right"):
+		if direction == "left":
+			direction = "right"
+			$sprite.scale.x *= -1
+			$attack_range.scale.x *= -1
+			$Hitbox.scale.x *= -1
+			$CollisionShape2D.scale.x *= -1
+		move_direction += 1
+		if !$AnimationPlayer.current_animation == "jump" and !$AnimationPlayer.current_animation == "attack":
+			$AnimationPlayer.play("walk")
+	# не двигается
+	else:
+		if !$AnimationPlayer.current_animation == "jump" and !$AnimationPlayer.current_animation == "attack":
+			$AnimationPlayer.play("idle")
+		
+	#state = IDLE
+	#print(Input.is_pressed())
+	velocity.x = move_direction * MOVE_SPEED
 	velocity = move_and_slide(velocity, Vector2.UP)
+#
 
 
 func _on_dead_zone_body_entered(body):

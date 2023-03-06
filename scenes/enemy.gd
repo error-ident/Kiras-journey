@@ -55,13 +55,22 @@ func move_state(delta, player):
 	# повернут направо
 	if position.direction_to(player.position).x > 0:
 		if directory == "left":
-			enem.scale.x *= -1
+			#enem.scale.x *= -1
+			$idle.scale.x *= -1
+			$attack.scale.x *= -1
+			$run.scale.x *= -1
+			$dmg_zone.scale.x *= -1
+			$attack_zone.scale.x *= -1
 			directory = "right"
 		move_direction = 30
 	# повернут налево
 	else:
 		if directory == "right":
-			enem.scale.x *= -1
+			$idle.scale.x *= -1
+			$attack.scale.x *= -1
+			$run.scale.x *= -1
+			$dmg_zone.scale.x *= -1
+			$attack_zone.scale.x *= -1
 			directory = "left"
 		move_direction = -30
 	#move_direction += position.direction_to(player.position).x
