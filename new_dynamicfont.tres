@@ -3,7 +3,7 @@
 [ext_resource path="res://logo.tres" type="DynamicFontData" id=1]
 
 [resource]
-size = 333
+size = 20
 outline_size = 7
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 1 )

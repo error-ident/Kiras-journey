@@ -27,3 +27,5 @@ func _on_NPC_body_exited(body):
 		
 func unpause(timeline_end):
 	get_tree().paused = false
+	$"../chest/Sprite".visible = true
+	$AnimationPlayer.play("visible")

@@ -8,8 +8,8 @@ const JUMP_SPEED = -300
 const MOVE_SPEED = 200
 var targets = []
 
-export(int) var hp_max: int = 100
-export(int) var hp: int = hp_max
+#export(int) var hp_max: int = 100
+#var hp  = Global.hp
 
 enum {
 	IDLE,
@@ -18,16 +18,17 @@ enum {
 	JUMP,
 }
 var state = IDLE
+var money = 0
 # отключить по дефолту
 onready var attack_hand = $attack_range/attack
 onready var attack_timer = $attack_timer
-onready var hp_bar = $HP_BAR
+onready var hp_bar = $money
 
 var direction = "right"
 func _ready():
 	attack_hand.disabled = true
 	attack_timer.set_wait_time(0.1)
-	hp_bar.text = "satiety: " + str(hp)
+	hp_bar.text = "денег: " + str(money)
 
 func die(reason):
 	# здесь будет переход на другую сцену с экраном "смерти"
@@ -37,7 +38,8 @@ func die(reason):
 
 func _physics_process(delta):
 	# хп
-	$hp_bar2.value = hp
+	$hp_bar2.value = Global.hp
+	hp_bar.text = "денег: " + str(Global.money)
 	var move_direction = 0
 	# машина состояний
 	#print("player: "+str(state))
@@ -101,10 +103,10 @@ func _on_attack_timeout():
 	attack_hand.disabled = true
 	
 func get_damage(damage):
-	hp -= damage
-	if hp <= 0:
+	Global.hp -= damage
+	if Global.hp <= 0:
 		die("Закусана")
-	hp_bar.text = "satiety: " + str(hp)
+	#hp_bar.text = "satiety: " + str(hp)
 	
 
 func _on_Hitbox_area_entered(area):
