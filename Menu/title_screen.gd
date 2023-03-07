@@ -21,7 +21,7 @@ func _on_Button_pressed(scene_to_load):
 
 func _on_FadeIn_fade_finished():
 # warning-ignore:return_value_discarded
-	get_tree().change_scene("res://scenes/level_1.tscn")
+	get_tree().change_scene("res://welcome/welcome.tscn")
 
 func _process(_delta):
 	pass
