@@ -1,11 +1,11 @@
 extends KinematicBody2D
 
-var speed = 200
+#var speed = 50
 var velocity = Vector2.ZERO
 var fall = Vector2(0, -100)
 const GRAVITY = 500
-const JUMP_SPEED = -300
-const MOVE_SPEED = 200
+const JUMP_SPEED = -280
+const MOVE_SPEED = 150
 var targets = []
 
 #export(int) var hp_max: int = 100
@@ -22,7 +22,7 @@ var money = 0
 # отключить по дефолту
 onready var attack_hand = $attack_range/attack
 onready var attack_timer = $attack_timer
-onready var hp_bar = $money
+onready var hp_bar = $eyes/money
 
 var direction = "right"
 func _ready():

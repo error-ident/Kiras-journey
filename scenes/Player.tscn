@@ -286,10 +286,17 @@ offset = Vector2( 0, -2 )
 hframes = 13
 
 [node name="eyes" type="Camera2D" parent="."]
-visible = false
 current = true
 zoom = Vector2( 0.5, 0.5 )
 smoothing_enabled = true
+
+[node name="money" type="Label" parent="eyes"]
+margin_left = -289.0
+margin_top = -165.0
+margin_right = -243.0
+margin_bottom = -143.0
+custom_fonts/font = ExtResource( 3 )
+text = "денег:"
 
 [node name="attack_range" type="Area2D" parent="." groups=["weapon"]]
 
@@ -303,14 +310,6 @@ shape = SubResource( 1 )
 
 [node name="attack_timer" type="Timer" parent="."]
 wait_time = 0.7
-
-[node name="money" type="Label" parent="."]
-margin_left = -50.0
-margin_top = -85.0
-margin_right = -4.0
-margin_bottom = -63.0
-custom_fonts/font = ExtResource( 3 )
-text = "денег:"
 
 [node name="Hitbox" type="Area2D" parent="."]
 position = Vector2( -1, 0 )
