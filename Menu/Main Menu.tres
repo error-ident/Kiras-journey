@@ -1,10 +1,6 @@
 [gd_resource type="DynamicFont" load_steps=2 format=2]
 
-[ext_resource path="res://Menu/fonts/tupo-vyaz_bold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Menu/ARIAL.TTF" type="DynamicFontData" id=1]
 
 [resource]
-<<<<<<< Updated upstream
-=======
-size = 100
->>>>>>> Stashed changes
 font_data = ExtResource( 1 )
