@@ -120,13 +120,13 @@
 			"text": "А теперь, давай посмотрим на закат и через 10 секунд, тебя выкинет в меню. Это значит, что путешествие подошло к концу) Напиши мне, пожалуйста, как это случится :3"
 		},
 		{
-			"event_id": "dialogic_023",
-			"hide_dialogbox": false,
-			"wait_seconds": 1
+			"event_id": "dialogic_022",
+			"transition_duration": 0
 		},
 		{
-			"event_id": "dialogic_022",
-			"transition_duration": 1
+			"event_id": "dialogic_023",
+			"hide_dialogbox": true,
+			"wait_seconds": 10
 		},
 		{
 			"change_scene": "res://Menu/Main Menu.tscn",
