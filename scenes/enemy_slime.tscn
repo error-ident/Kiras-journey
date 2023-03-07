@@ -281,6 +281,7 @@ texture_progress_offset = Vector2( 0, 30 )
 
 [node name="attack_sound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 7 )
+volume_db = 24.0
 
 [connection signal="body_entered" from="area_angry" to="." method="_on_area_angry_body_entered"]
 [connection signal="area_entered" from="dmg_zone" to="." method="_on_dmg_zone_area_entered"]

@@ -425,10 +425,10 @@ position = Vector2( 139, -21 )
 position = Vector2( 424, -41 )
 
 [node name="food3" parent="all_food" instance=ExtResource( 3 )]
-position = Vector2( 717, -36 )
+position = Vector2( 742, -38 )
 
 [node name="food4" parent="all_food" instance=ExtResource( 3 )]
-position = Vector2( 752, -66 )
+position = Vector2( 774, -37 )
 
 [node name="food5" parent="all_food" instance=ExtResource( 3 )]
 position = Vector2( 772, 5 )
@@ -464,7 +464,7 @@ position = Vector2( 3652, -93 )
 position = Vector2( 3457, -145 )
 
 [node name="food13" parent="all_food" instance=ExtResource( 3 )]
-position = Vector2( 3297, -103 )
+position = Vector2( 1419, -8 )
 
 [node name="food14" parent="all_food" instance=ExtResource( 3 )]
 position = Vector2( 3021, -139 )
@@ -472,19 +472,46 @@ position = Vector2( 3021, -139 )
 [node name="food15" parent="all_food" instance=ExtResource( 3 )]
 position = Vector2( 2877, -80 )
 
+[node name="food20" parent="all_food" instance=ExtResource( 3 )]
+position = Vector2( 1771, 56 )
+
+[node name="food21" parent="all_food" instance=ExtResource( 3 )]
+position = Vector2( 2302, -89 )
+
+[node name="food22" parent="all_food" instance=ExtResource( 3 )]
+position = Vector2( 2429, -60 )
+
+[node name="food23" parent="all_food" instance=ExtResource( 3 )]
+position = Vector2( 2040, 54 )
+
+[node name="food24" parent="all_food" instance=ExtResource( 3 )]
+position = Vector2( 995, 4 )
+
+[node name="food25" parent="all_food" instance=ExtResource( 3 )]
+position = Vector2( 1200, -17 )
+
 [node name="all_enemy" type="Node2D" parent="."]
 
 [node name="enemy" parent="all_enemy" instance=ExtResource( 6 )]
-position = Vector2( 2131, 78 )
+position = Vector2( 2150, 67 )
 
 [node name="enemy_skeleton" parent="all_enemy" instance=ExtResource( 7 )]
-position = Vector2( 3225, -94 )
+position = Vector2( 3217, -89 )
 
 [node name="enemy_slime" parent="all_enemy" instance=ExtResource( 8 )]
-position = Vector2( 2787, -77 )
+position = Vector2( 2787, -92 )
 
 [node name="enemy_rat" parent="all_enemy" instance=ExtResource( 6 )]
-position = Vector2( 156, 46 )
+position = Vector2( 156, 41 )
+
+[node name="enemy2" parent="all_enemy" instance=ExtResource( 6 )]
+position = Vector2( 4209, 171 )
+
+[node name="enemy3" parent="all_enemy" instance=ExtResource( 6 )]
+position = Vector2( 3945, -131 )
+
+[node name="enemy_skeleton2" parent="all_enemy" instance=ExtResource( 7 )]
+position = Vector2( 5131, -76 )
 
 [node name="Portal" type="Sprite" parent="."]
 position = Vector2( -301, -168 )
@@ -604,8 +631,9 @@ motion_scale = Vector2( 0.5, 1 )
 motion_mirroring = Vector2( 3000, 0 )
 
 [node name="Sprite" type="Sprite" parent="bg/ParallaxLayer5"]
-position = Vector2( 3389, 18 )
+position = Vector2( 3679, -278 )
 scale = Vector2( 7.51313, 1.63241 )
+z_index = 4096
 texture = ExtResource( 15 )
 
 [node name="ParallaxLayer6" type="ParallaxLayer" parent="bg"]

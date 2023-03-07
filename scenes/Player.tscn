@@ -2,7 +2,7 @@
 
 [ext_resource path="res://scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://sprites/player/Бездействие .png" type="Texture" id=2]
-[ext_resource path="res://Menu/Main Menu.tres" type="DynamicFont" id=3]
+[ext_resource path="res://money.tres" type="DynamicFont" id=3]
 [ext_resource path="res://sprites/icons/greenbar (1).png" type="Texture" id=6]
 [ext_resource path="res://sprites/icons/greenbar (3).png" type="Texture" id=7]
 [ext_resource path="res://sprites/player/Прыжок.png" type="Texture" id=8]
@@ -288,13 +288,12 @@ hframes = 13
 [node name="eyes" type="Camera2D" parent="."]
 current = true
 zoom = Vector2( 0.5, 0.5 )
-smoothing_enabled = true
 
 [node name="money" type="Label" parent="eyes"]
-margin_left = -289.0
-margin_top = -165.0
-margin_right = -243.0
-margin_bottom = -143.0
+margin_left = -302.0
+margin_top = 130.0
+margin_right = -152.0
+margin_bottom = 157.0
 custom_fonts/font = ExtResource( 3 )
 text = "денег:"
 
@@ -319,10 +318,10 @@ position = Vector2( 2.5, -4.5 )
 shape = SubResource( 1 )
 
 [node name="hp_bar2" type="TextureProgress" parent="."]
-margin_left = -60.0
-margin_top = -104.0
-margin_right = 85.0
-margin_bottom = 41.0
+margin_left = -67.0
+margin_top = 85.0
+margin_right = 87.0
+margin_bottom = 238.0
 max_value = 120.0
 value = 80.0
 texture_under = ExtResource( 7 )
