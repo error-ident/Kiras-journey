@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
+[ext_resource path="res://Menu/Main Menu.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Menu/Buttons/StartButton.gd" type="Script" id=2]
 
 [node name="Start Game" type="Button"]
@@ -11,5 +12,7 @@ margin_right = 1925.28
 margin_bottom = 603.0
 rect_min_size = Vector2( 360, 60 )
 rect_scale = Vector2( 1.00351, 1.77933 )
+custom_fonts/font = ExtResource( 1 )
+text = "НАЧАТЬ ЗАНОВО"
 script = ExtResource( 2 )
 scene_to_load = "res://Scenes/LevelOne.tscn"

@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Menu/fonts/tupo-vyaz_bold.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://Menu/Yasuha - Flyday Chinatown [ 8bits Version ].mp3" type="AudioStream" id=3]
+[ext_resource path="res://sounds/game-over-lol-u-died-i-wanna-be-the-boshy.mp3" type="AudioStream" id=2]
+[ext_resource path="res://sprites/background/wallpaperflare.com_wallpaper.jpg" type="Texture" id=3]
 [ext_resource path="res://Menu/UISound.tscn" type="PackedScene" id=4]
 [ext_resource path="res://fade_in/FadeIn.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Menu/Buttons/StartButton.tscn" type="PackedScene" id=6]
@@ -54,12 +55,17 @@ anchor_bottom = 1.0
 rect_pivot_offset = Vector2( 596, 179 )
 script = SubResource( 1 )
 
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 648, 335 )
+scale = Vector2( 0.675, 0.724074 )
+texture = ExtResource( 3 )
+
 [node name="Label" type="Label" parent="."]
-margin_left = -289.0
-margin_top = 52.0
-margin_right = 1554.0
-margin_bottom = 312.0
-custom_colors/font_color = Color( 1, 1, 1, 1 )
+margin_left = -8.0
+margin_top = 136.0
+margin_right = 1280.0
+margin_bottom = 396.0
+custom_colors/font_color = Color( 0.301961, 0.0196078, 0.0196078, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "не наелась"
 align = 1
@@ -73,8 +79,7 @@ size_flags_vertical = 3
 [node name="UISound" parent="." instance=ExtResource( 4 )]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 3 )
-volume_db = -18.538
+stream = ExtResource( 2 )
 autoplay = true
 
 [node name="main" type="CenterContainer" parent="."]
@@ -87,12 +92,16 @@ rect_min_size = Vector2( 770, 300 )
 rect_scale = Vector2( 0.465011, 0.432015 )
 
 [node name="Start Game" parent="." instance=ExtResource( 6 )]
-margin_left = 410.52
-margin_top = 333.0
-margin_right = 819.52
-margin_bottom = 398.0
-text = "start over"
+margin_left = 3.52
+margin_top = 448.0
+margin_right = 1273.52
+margin_bottom = 606.0
+text = "ЗАНОВО"
 flat = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_right = 432.0
+margin_bottom = 248.0
 
 [connection signal="tree_entered" from="FadeIn" to="FadeIn" method="_on_FadeIn_tree_entered"]
 [connection signal="pressed" from="Start Game" to="." method="_on_Start_Game_pressed"]

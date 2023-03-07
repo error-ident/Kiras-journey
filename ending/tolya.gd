@@ -15,9 +15,7 @@ func _input(event):
 			dialog.pause_mode = Node.PAUSE_MODE_PROCESS
 			add_child(dialog)
 			dialog.connect('timeline_end', self, 'unpause')
-			#remove_child(dialog)
-			#remove_child(dialog)
-			remove_child($CollisionShape2D)
+		
 
 func _on_NPC_body_entered(body):
 	if body.name == "Player":
