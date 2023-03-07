@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/blod.mp3-f082185156b6ab0e1e59c21ab1c1378a.mp3str"
+
+[deps]
+
+source_file="res://sounds/blod.mp3"
+dest_files=[ "res://.import/blod.mp3-f082185156b6ab0e1e59c21ab1c1378a.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

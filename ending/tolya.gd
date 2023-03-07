@@ -13,8 +13,11 @@ func _input(event):
 			get_tree().paused = true
 			var dialog = Dialogic.start('anatoly')
 			dialog.pause_mode = Node.PAUSE_MODE_PROCESS
-			dialog.connect('timeline_end', self, 'unpause')
 			add_child(dialog)
+			dialog.connect('timeline_end', self, 'unpause')
+			#remove_child(dialog)
+			#remove_child(dialog)
+			remove_child($CollisionShape2D)
 
 func _on_NPC_body_entered(body):
 	if body.name == "Player":

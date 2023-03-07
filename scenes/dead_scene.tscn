@@ -1,0 +1,98 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Menu/fonts/tupo-vyaz_bold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Menu/Yasuha - Flyday Chinatown [ 8bits Version ].mp3" type="AudioStream" id=3]
+[ext_resource path="res://Menu/UISound.tscn" type="PackedScene" id=4]
+[ext_resource path="res://fade_in/FadeIn.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Menu/Buttons/StartButton.tscn" type="PackedScene" id=6]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Control
+
+var scene_path_to_load
+
+#var test = preload(\"res://Menu/video.webm\")
+
+func _ready():
+	#print($VideoPlayer.stream.resource_name)
+	set_process(true)
+	
+	#$\"main/Start Game\".grab_focus()
+	for button in $main.get_children():
+		button.connect(\"pressed\", self, \"_on_Button_pressed\", [button.scene_to_load])
+
+
+func _on_Button_pressed(scene_to_load):
+	scene_path_to_load = scene_to_load
+	$UISound.play()
+	#$FadeIn.show()
+	#$FadeIn.fade_in()
+	#get_tree().change_scene(\"res://scenes/level_1.tscn\")
+
+func _on_FadeIn_fade_finished():
+# warning-ignore:return_value_discarded
+	#get_tree().change_scene(\"res://scenes/level_1.tscn\")
+	pass
+func _process(_delta):
+	pass
+		
+func _on_VideoPlayer_finished():
+	$VideoPlayer.play()
+
+
+func _on_Start_Game_pressed():
+	get_tree().change_scene(\"res://scenes/level_1.tscn\")
+"
+
+[sub_resource type="DynamicFont" id=2]
+size = 300
+font_data = ExtResource( 1 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 596, 179 )
+script = SubResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = -289.0
+margin_top = 52.0
+margin_right = 1554.0
+margin_bottom = 312.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "не наелась"
+align = 1
+valign = 1
+
+[node name="FadeIn" parent="." instance=ExtResource( 5 )]
+visible = false
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="UISound" parent="." instance=ExtResource( 4 )]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -18.538
+autoplay = true
+
+[node name="main" type="CenterContainer" parent="."]
+anchor_right = 10.0
+margin_left = 447.0
+margin_top = 583.0
+margin_right = 1217.0
+margin_bottom = 883.0
+rect_min_size = Vector2( 770, 300 )
+rect_scale = Vector2( 0.465011, 0.432015 )
+
+[node name="Start Game" parent="." instance=ExtResource( 6 )]
+margin_left = 410.52
+margin_top = 333.0
+margin_right = 819.52
+margin_bottom = 398.0
+text = "start over"
+flat = true
+
+[connection signal="tree_entered" from="FadeIn" to="FadeIn" method="_on_FadeIn_tree_entered"]
+[connection signal="pressed" from="Start Game" to="." method="_on_Start_Game_pressed"]

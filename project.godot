@@ -99,6 +99,7 @@ enabled=PoolStringArray( "res://addons/VirtualJoystick/plugin.cfg", "res://addon
 [global]
 
 "нача"=false
+scene=false
 
 [gui]
 

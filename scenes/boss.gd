@@ -20,6 +20,7 @@ enum {
 	RUN,
 	ATTACK,
 	DIE,
+	ALREADY_DIE,
 }
 var state = IDLE
 onready var player = $"../Player"
@@ -50,8 +51,12 @@ func _physics_process(delta):
 			$idle.visible = true
 			$run.visible = false
 			$attack.visible = false
+			$hp_bar2.visible = false
 			die()
-
+		ALREADY_DIE:
+			if $die_timer.is_stopped():
+				$die_timer.start()
+			print($die_timer.time_left)
 func move_state(delta, player):
 	# повернут направо
 	if position.direction_to(player.position).x > 0:
@@ -85,9 +90,13 @@ func die():
 	remove_child($attack_zone)
 	remove_child($col)
 	$anima.play("die")
+	$"../bosssound".stop()
+	print("О НЕТ")
+	state = ALREADY_DIE
+	#get_tree().change_scene("res://ending/ending.tscn")
+	
 func get_damage():
 		hp -= 1
-		hp_label.text = str(hp)
 		$hp_bar2.value -= 1
 		if hp <= 0:
 			state = DIE
@@ -100,7 +109,7 @@ func _on_area_angry_body_entered(body):
 func _on_dmg_zone_area_entered(area):
 	if area.is_in_group("weapon"):
 		get_damage()
-		print("получен урон (моб крыса): {}")
+		print("получен урон (босс): {}")
 
 # игрок в зоне поражения
 func _on_attack_zone_body_entered(body):
@@ -109,10 +118,14 @@ func _on_attack_zone_body_entered(body):
 		#body.
 		
 func _on_attack_zone_body_exited(body):
-	print("мачи")
 	state = RUN
 
 func _on_attack_timer_timeout():
 	if $attack_zone/Collision:
 		$attack_zone/Collision.disabled = false
 	state = RUN
+
+
+func _on_die_timer_timeout():
+	print("ТЕЛЕПОРТАЦИЯ!!!!!")
+	get_tree().change_scene("res://ending/ending.tscn")

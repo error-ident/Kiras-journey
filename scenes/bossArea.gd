@@ -19,6 +19,9 @@ func _on_NPC_body_entered(body):
 			dialog.connect('timeline_end', self, 'unpause')
 			#ПОСЛЕ ДИАЛОГА НАДО УДАЛИТЬ/вырубить BOSSAREA и попиздиться с боссом
 			#Запустить песню для боссфайта
+			remove_child($CollisionShape2D)
+			$"../levelsound".stop()
+			$"../bosssound".play()
 	
 	
 func _on_NPC_body_exited(body):

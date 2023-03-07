@@ -32,18 +32,18 @@ func _ready():
 func die(reason):
 	# здесь будет переход на другую сцену с экраном "смерти"
 	# думаю будет забавно написать причину "смерти"
-	print(reason)
-	get_tree().reload_current_scene()
+	#print(reason)
+	get_tree().change_scene("res://scenes/dead_scene.tscn")
 
 func _physics_process(delta):
 	# хп
 	$hp_bar2.value = hp
 	var move_direction = 0
 	# машина состояний
-	print("player: "+str(state))
+	#print("player: "+str(state))
 	# проверяет что Player находится на полу
 	if is_on_floor():
-		print("on floor")
+		#print("on floor")
 		if $AnimationPlayer.current_animation == "jump":
 			$AnimationPlayer.play("idle")
 		if Input.is_action_pressed("jump"):
@@ -56,6 +56,7 @@ func _physics_process(delta):
 	# атака
 	if Input.is_action_just_pressed("attack"):
 		$AnimationPlayer.play("attack")
+		#$knife.play()
 		attack_hand.disabled = false
 		attack_timer.start()
 	# передвижение

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://sprites/boss/attacking.png" type="Texture" id=1]
 [ext_resource path="res://scenes/boss.gd" type="Script" id=2]
@@ -12,8 +12,6 @@ extents = Vector2( 13.875, 33.2812 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 137, 53.75 )
-
-[sub_resource type="Theme" id=8]
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 20, 23 )
@@ -130,7 +128,7 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0.6 ),
+"times": PoolRealArray( 1.9 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
@@ -198,14 +196,6 @@ visible = false
 position = Vector2( -1, 16 )
 shape = SubResource( 2 )
 
-[node name="hp" type="Label" parent="."]
-margin_left = -4.0
-margin_top = -58.0
-margin_right = 36.0
-margin_bottom = -44.0
-theme = SubResource( 8 )
-text = "5"
-
 [node name="dmg_zone" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="dmg_zone"]
@@ -256,9 +246,14 @@ texture_under = ExtResource( 6 )
 texture_progress = ExtResource( 5 )
 texture_progress_offset = Vector2( 0, 30 )
 
+[node name="die_timer" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
+
 [connection signal="body_entered" from="area_angry" to="." method="_on_area_angry_body_entered"]
 [connection signal="area_entered" from="dmg_zone" to="." method="_on_dmg_zone_area_entered"]
 [connection signal="timeout" from="attack_timer" to="." method="_on_attack_timer_timeout"]
 [connection signal="body_entered" from="attack_zone" to="." method="_on_attack_zone_body_entered"]
 [connection signal="body_exited" from="attack_zone" to="." method="_on_attack_zone_body_exited"]
 [connection signal="body_shape_entered" from="attack_zone" to="." method="_on_attack_zone_body_shape_entered"]
+[connection signal="timeout" from="die_timer" to="." method="_on_die_timer_timeout"]

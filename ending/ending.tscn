@@ -278,9 +278,10 @@ radius = 56.0803
 [node name="Node2D" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( -312, 94 )
+position = Vector2( 2463, -1347 )
 
 [node name="stars" type="ParallaxBackground" parent="."]
+visible = false
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="stars"]
 rotation = 1.5708
@@ -398,6 +399,7 @@ scale = Vector2( 3, 2.61389 )
 texture = ExtResource( 20 )
 
 [node name="mountains" type="ParallaxBackground" parent="."]
+visible = false
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="mountains"]
 motion_scale = Vector2( 0.1, 1 )
