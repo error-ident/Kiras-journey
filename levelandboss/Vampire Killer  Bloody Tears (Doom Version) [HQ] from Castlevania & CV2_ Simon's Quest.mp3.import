@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Vampire Killer  Bloody Tears (Doom Version) [HQ] from Castlevania & CV2_ Simon's Quest.mp3-3a4dd40cb3b8fb1c2efed50cb751be1f.mp3str"
+
+[deps]
+
+source_file="res://levelandboss/Vampire Killer  Bloody Tears (Doom Version) [HQ] from Castlevania & CV2_ Simon's Quest.mp3"
+dest_files=[ "res://.import/Vampire Killer  Bloody Tears (Doom Version) [HQ] from Castlevania & CV2_ Simon's Quest.mp3-3a4dd40cb3b8fb1c2efed50cb751be1f.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

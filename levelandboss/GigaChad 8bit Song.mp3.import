@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/GigaChad 8bit Song.mp3-80de9cc2a2a4e7c2f3660f16ba64f8c8.mp3str"
+
+[deps]
+
+source_file="res://levelandboss/GigaChad 8bit Song.mp3"
+dest_files=[ "res://.import/GigaChad 8bit Song.mp3-80de9cc2a2a4e7c2f3660f16ba64f8c8.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Metric - Gold Guns Girls (8-Bit remix by supralightning).mp3-66a8f23fd2652cf095f83e8c0b8a57e6.mp3str"
+
+[deps]
+
+source_file="res://levelandboss/Metric - Gold Guns Girls (8-Bit remix by supralightning).mp3"
+dest_files=[ "res://.import/Metric - Gold Guns Girls (8-Bit remix by supralightning).mp3-66a8f23fd2652cf095f83e8c0b8a57e6.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

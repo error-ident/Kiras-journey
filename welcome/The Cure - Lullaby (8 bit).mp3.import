@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/The Cure - Lullaby (8 bit).mp3-67194a3ecbf2b9bb772969c031180101.mp3str"
+
+[deps]
+
+source_file="res://welcome/The Cure - Lullaby (8 bit).mp3"
+dest_files=[ "res://.import/The Cure - Lullaby (8 bit).mp3-67194a3ecbf2b9bb772969c031180101.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -18,7 +18,7 @@ radius = 52.0865
 extents = Vector2( 15, 10 )
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 9.5, 17 )
+extents = Vector2( 16.5, 16.5 )
 
 [sub_resource type="Animation" id=4]
 length = 0.001
@@ -297,7 +297,7 @@ text = "hungry: %s"
 position = Vector2( -1, 0 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
-position = Vector2( 2.5, -4 )
+position = Vector2( 2.5, -4.5 )
 shape = SubResource( 1 )
 
 [node name="hp_bar2" type="TextureProgress" parent="."]
