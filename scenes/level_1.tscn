@@ -499,7 +499,7 @@ position = Vector2( 2150, 67 )
 position = Vector2( 3217, -89 )
 
 [node name="enemy_slime" parent="all_enemy" instance=ExtResource( 8 )]
-position = Vector2( 2787, -92 )
+position = Vector2( 2787, -87 )
 
 [node name="enemy_rat" parent="all_enemy" instance=ExtResource( 6 )]
 position = Vector2( 156, 41 )
@@ -508,10 +508,10 @@ position = Vector2( 156, 41 )
 position = Vector2( 4209, 171 )
 
 [node name="enemy3" parent="all_enemy" instance=ExtResource( 6 )]
-position = Vector2( 3945, -131 )
+position = Vector2( 3945, -121 )
 
 [node name="enemy_skeleton2" parent="all_enemy" instance=ExtResource( 7 )]
-position = Vector2( 5131, -76 )
+position = Vector2( 5131, -57 )
 
 [node name="Portal" type="Sprite" parent="."]
 position = Vector2( -301, -168 )

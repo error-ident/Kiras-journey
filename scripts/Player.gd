@@ -34,6 +34,7 @@ func die(reason):
 	# здесь будет переход на другую сцену с экраном "смерти"
 	# думаю будет забавно написать причину "смерти"
 	#print(reason)
+	Global.hp = 100
 	get_tree().change_scene("res://scenes/dead_scene.tscn")
 
 func _physics_process(delta):

@@ -82,6 +82,7 @@ _global_script_class_icons={
 
 config/name="basic_platformer"
 run/main_scene="res://Menu/Main Menu.tscn"
+boot_splash/show_image=false
 config/icon="res://icon.png"
 
 [autoload]
