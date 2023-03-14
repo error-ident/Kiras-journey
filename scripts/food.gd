@@ -21,6 +21,8 @@ func _ready():
 func _on_area_body_entered(body):
 	if body.name == "Player":
 		Global.hp += 10
+		if Global.hp > 100:
+			Global.hp = 100
 		Global.money += 10
 		$anim.play("take")
 		
